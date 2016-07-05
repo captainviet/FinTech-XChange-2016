@@ -5,9 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>FinTech XChange 2016</title>
+		<title>{Event Name}</title>
 
-		<link rel="icon" href="res/img/logo-!name.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.paypalobjects.com/webstatic/icon/pp144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.paypalobjects.com/webstatic/icon/pp114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.paypalobjects.com/webstatic/icon/pp72.png" />
+		<link rel="apple-touch-icon-precomposed" href="https://www.paypalobjects.com/webstatic/icon/pp64.png" />
+		<link rel="shortcut icon" sizes="196x196" href="https://www.paypalobjects.com/webstatic/icon/pp196.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/pp32.png" />
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -18,7 +24,7 @@
 
 	</head>
 
-	<body data-spy="scroll" data-target= ".navbar-fixed-top">
+	<body data-target=".navbar-fixed-top">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -29,7 +35,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="https://www.paypal.com"><img src="res/img/logo-name.png" alt="PayPal Pte Ltd"></a>
+					<a class="navbar-brand" href="https://www.paypal.com"><img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.svg" alt="PayPal" class="logo"></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,13 +53,13 @@
 
 		<div>
 			<p id="event-name">
-				&lt;event-name&gt;
+				{Event Name}
 			</p>
 			<p id="event-loc">
-				&lt;event-location&gt;
+				{Event Location}
 			</p>
 			<p id="event-time">
-				&lt;event-time&gt;
+				{Event Time}
 			</p>
 		</div>
 
@@ -68,38 +74,15 @@
 					<h3>
 						About the Event
 					</h3>
-
-					<!-- <div class="row">
-
-						<div class="col-md-7">
-							
-						</div>
-
-						<div class="col-md-1">
-							Hours
-						</div>
-
-						<div class="col-md-1">
-							Minutes
-						</div>
-
-						<div class="col-md-1">
-							Seconds
-						</div>
-
-						<div class="col-md-2" style="text-align: center">
-
-							<button type="button" class="btn btn-primary">
-								<span><i class="fa fa-plus-circle"></i> Register</span>
-							</button>
-						</div>
-					</div> -->
 				</div> <!-- .panel-heading -->
 
 				<div class="panel-body">
 					<p>
-						&lt;about-event-content&gt;
+						PayPal is ushering in the Future of Money with the launch of its brand new PayPal Innovation Lab in Singapore. As a leader in digital payments, PayPal is bringing together its expertise and resources by fostering innovation and building capability that helps take Singapore to the next frontier in digital commerce and payments.
+						<span class="read-more-text" id="about-info">This is a first-of-its-kind collaboration between PayPal and the Singapore FinTech ecosystem including government agencies, industry associations, consumers and universities. Through the PayPal Innovation Lab, PayPal endeavors to transform the community it is part of – by enabling researchers, students, start-ups and small businesses to embrace FinTech innovation in topics close to their hearts, and contribute to shaping the Future of Money. This year to kick-start this initiative, PayPal is calling for SMEs in the F&amp;B industry to step forward to share their challenges relating to payments.</span>
 					</p>
+
+					<div class="container-fluid read-more btn btn-primary" id="about">Read More <i class="fa fa-angle-double-right"></i></div>
 
 					<p>
 						Come join us for an exciting day and a sneak peek into the Future of Money!
@@ -122,104 +105,103 @@
 				</div>
 
 				<div class="panel-body">
-					&lt;detail-schedule&gt;
 
-					<!-- <table class="table table-striped table-bordered">
+					<table class="table table-striped table-bordered">
 						
-								<tbody>
-									
-									<tr>
-										<td class="row">
-											<div class="col-md-2">
-												9:30
-											</div>
-											<div class="col-md-10">
-												Registration
-											</div>
-										</td>
+						<tbody>
+							
+							<tr>
+								<td class="row">
+									<div class="col-md-2">
+										9:30
+									</div>
+									<div class="col-md-10">
+										Registration
+									</div>
+								</td>
 
-										<td class="row">
-											<div class="col-md-2">
-												10:30
-											</div>
-											<div class="col-md-10">
-												VIP & Media Tour of Innovation Showcase
-											</div>
-										</td>
-									</tr>
+								<td class="row">
+									<div class="col-md-2">
+										10:30
+									</div>
+									<div class="col-md-10">
+										VIP &amp; Media Tour of Innovation Showcase
+									</div>
+								</td>
+							</tr>
 
-									<tr>
-										<td class="row">
-											<div class="col-md-2">
-												10:00
-											</div>
-											<div class="col-md-4">
-												Welcome Address
-											</div>
-											<div class="col-md-6 text-muted">
-												Rohan Mahadevan
-												<br>
-												Senior Vice President, APAC, PayPal
-											</div>
-										</td>
+							<tr>
+								<td class="row">
+									<div class="col-md-2">
+										10:00
+									</div>
+									<div class="col-md-4">
+										Welcome Address
+									</div>
+									<div class="col-md-6 text-muted">
+										Rohan Mahadevan
+										<br>
+										Senior Vice President, APAC, PayPal
+									</div>
+								</td>
 
-										<td class="row">
-											<div class="col-md-2">
-												11:30
-											</div>
-											<div class="col-md-10">
-												Innovation Showcase
-											</div>
-										</td>
-									</tr>
+								<td class="row">
+									<div class="col-md-2">
+										11:30
+									</div>
+									<div class="col-md-10">
+										Innovation Showcase
+									</div>
+								</td>
+							</tr>
 
-									<tr>
-										<td class="row">
-											<div class="col-md-2">
-												10:05
-											</div>
-											<div class="col-md-4">
-												Keynote Address
-											</div>
-											<div class="col-md-6 text-muted">
-												S Iswaran
-												<br>
-												Minister for Trade and Industry
-											</div>
-										</td>
+							<tr>
+								<td class="row">
+									<div class="col-md-2">
+										10:05
+									</div>
+									<div class="col-md-4">
+										Keynote Address
+									</div>
+									<div class="col-md-6 text-muted">
+										S Iswaran
+										<br>
+										Minister for Trade and Industry
+									</div>
+								</td>
 
-										<td class="row">
-											<div class="col-md-2">
-												12:00
-											</div>
-											<div class="col-md-10">
-												Lunch & Networking
-											</div>
-										</td>
-									</tr>
+								<td class="row">
+									<div class="col-md-2">
+										12:00
+									</div>
+									<div class="col-md-10">
+										Lunch &amp; Networking
+									</div>
+								</td>
+							</tr>
 
-									<tr>
-										<td class="row">
-											<div class="col-md-2">
-												10:25
-											</div>
-											<div class="col-md-10">
-												PayPal Innovation lab Launch Ceremony
-											</div>
-										</td>
+							<tr>
+								<td class="row">
+									<div class="col-md-2">
+										10:25
+									</div>
+									<div class="col-md-10">
+										PayPal Innovation lab Launch Ceremony
+									</div>
+								</td>
 
-										<td class="row">
-											<div class="col-md-2">
-												14:00
-											</div>
-											<div class="col-md-10">
-												PayPal FinTech XChange
-											</div>
-										</td>
-									</tr>
+								<td class="row">
+									<div class="col-md-2">
+										14:00
+									</div>
+									<div class="col-md-10">
+										PayPal FinTech XChange
+									</div>
+								</td>
+							</tr>
 
-								</tbody>
-							</table> -->
+						</tbody>
+					</table>
 
 					
 				</div> <!-- .panel-body -->
@@ -238,84 +220,199 @@
 					</h3>
 				</div>
 
-				<div class="tab-content">
-					
-					<div id="speaker-carousel" class="carousel slide" data-ride="carousel">
-						  <!-- Indicators -->
-						<ol class="carousel-indicators">
-					    	<li data-target="#speaker-carousel" data-slide-to="0" class="active"></li>
-						    <li data-target="#speaker-carousel" data-slide-to="1"></li>
-						    <li data-target="#speaker-carousel" data-slide-to="2"></li>
-						    <li data-target="#speaker-carousel" data-slide-to="3"></li>
-						</ol>
+				<div class="container-fluid">
+				  	<div class="row">
+				    	<div class="col-md-12">
+				      		<div class="carousel slide multi-item-carousel" id="theCarousel">
+				        		<div class="carousel-inner">
 
-						  <!-- Wrapper for slides -->
-						<div class="carousel-inner container-fluid" role="listbox">
-						    <div class="item active row">
-								<div class="thumbnail col-md-6">
-						   			<a href="#speaker-2" data-toggle="tab"><img src="res/img/profile_iswaran.png" alt="rohan"></a>
-						   			<p class="name">&lt;speaker-1&gt;
-						   				<br>
-										<span class="text-muted">&lt;speaker-1-info&gt;</span>
-									</p>
-						   		</div> <!-- .thumbnail -->
+				          			<div class="item active">
+				            			<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_(crest).svg/592px-FC_Barcelona_(crest).svg.png" class="img-responsive"></a></div>
+				          			</div>
 
-								<div class="thumbnail col-md-6">
-						   			<a href="#speaker-2" data-toggle="tab"><img src="res/img/profile_rohan.png" alt=""></a>
-						   			<p class="name">&lt;speaker-2&gt;
-						   				<br>
-										<span class="text-muted">&lt;speaker-2-info&gt;</span>
-									</p>
-						   		</div> <!-- .thumbnail -->
-						    </div> <!-- .item -->
+				          			<div class="item">
+					            		<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="http://logos-download.com/wp-content/uploads/2016/05/Spain_national_football_team_logo.png" class="img-responsive"></a></div>
+					          		</div>
 
-						    <div class="item row">
+					          		<div class="item">
+					            		<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="https://upload.wikimedia.org/wikipedia/en/8/84/Afa_logo_jerseys.png" class="img-responsive"></a></div>
+					          		</div>
 
-								<div class="thumbnail col-md-6">
-						   			<a href="#speaker-2" data-toggle="tab"><img src="res/img/profile_iswaran.png" alt=""></a>
-						   			<p class="name">&lt;speaker-3&gt;
-						   				<br>
-										<span class="text-muted">&lt;speaker-3-info&gt;</span>
-									</p>
-						   		</div> <!-- .thumbnail -->
+					          		<div class="item">
+					            		<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg/2000px-Logo_FC_Bayern_M%C3%BCnchen.svg.png" class="img-responsive"></a></div>
+					          		</div>
 
-								<div class="thumbnail col-md-6">
-						   			<a href="#speaker-2" data-toggle="tab"><img src="res/img/profile_rohan.png" alt=""></a>
-						   			<p class="name">&lt;speaker-4&gt;
-						   				<br>
-										<span class="text-muted">&lt;speaker-4-info&gt;</span>
-									</p>
-						   		</div> <!-- .thumbnail -->   
-						    </div> <!-- .item -->
+					          		<div class="item">
+					            		<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="http://freepngimages.com/wp-content/uploads/2015/10/Manchester-City-football-club-logo.png" class="img-responsive"></a></div>
+					          		</div>
 
-						</div> <!-- .carousel-inner -->
+					          		<div class="item">
+					            		<div class="col-xs-12 col-sm-6 col-md-4"><a href="#1"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/1024px-Leicester_City_crest.svg.png" class="img-responsive"></a></div>
+					          		</div>
+					        	</div>
 
-						  <!-- Left and right controls -->
-					  	<a class="left carousel-control" href="#speaker-carousel" role="button" data-slide="prev">
-					    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					    	<span class="sr-only">Previous</span>
-					  	</a>
-					  	<a class="right carousel-control" href="#speaker-carousel" role="button" data-slide="next">
-					    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					    	<span class="sr-only">Next</span>
-					  	</a>
-					</div> <!-- .carousel -->
-<!-- 
-					<div class="tab-pane fade" id="speaker-3">
-						<div class="jumbotron">
-							<p>Some Info</p>
-						</div>
-					</div>
+					        	<a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
 
-					<div class="tab-pane fade" id="speaker-4">
-						<div class="jumbotron">
-							<p>Some Info</p>
-						</div>
-					</div>
- -->
-				</div> <!-- .tab-content -->
+					        	<a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+					      	</div>
+					    </div>
+				  	</div>
+				</div>
 			</div> <!-- .panel -->
 		</div> <!-- .container -->
+
+
+		<!-- <div class="container">
+
+			<div class="panel panel-default">
+
+				<div class="panel-heading">
+					<h3 class="panel-title-cust">FAQ</h3>
+					Frequently asked question
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="panel-group" id="accordion-left">
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-1" data-toggle="collapse" data-parent="#accordion-left">Quesion 1</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse in" id="question-1">
+									<div class="panel-body">
+										<p>
+											Answer 1
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-2" data-toggle="collapse" data-parent="#accordion-left">Question 2</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-2">
+									<div class="panel-body">
+										<p>
+											Answer 2
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-3" data-toggle="collapse" data-parent="#accordion-left">Question 3</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-3">
+									<div class="panel-body">
+										<p>
+											Answer 3
+										</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-4" data-toggle="collapse" data-parent="#accordion-left">Question 4</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-4">
+									<div class="panel-body">
+										<p>
+											Answer 4
+										</p>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel-group" id="accordion-right">
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-5" data-toggle="collapse" data-parent="#accordion-right">Quesion 5</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-5">
+									<div class="panel-body">
+										<p>
+											Answer 5
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-6" data-toggle="collapse" data-parent="#accordion-right">Question 6</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-6">
+									<div class="panel-body">
+										<p>
+											Answer 6
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-7" data-toggle="collapse" data-parent="#accordion-right">Question 7</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-7">
+									<div class="panel-body">
+										<p>
+											Answer 7
+										</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title-cust">
+										<a href="#question-8" data-toggle="collapse" data-parent="#accordion-right">Question 8</a>
+									</h4>
+								</div>
+
+								<div class="panel-collapse collapse" id="question-8">
+									<div class="panel-body">
+										<p>
+											Answer 8
+										</p>
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
 
 		<div class="container" id="venue-heading">
 
@@ -329,7 +426,6 @@
 					</h3>
 				</div>
 
-					<!-- <iframe height="450" width="100%" frameborder="0" style="border: 0" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAKJyNP-diLPyMwjJkB-vOa0CZBHYaf1cE&q=Suntec+Convention+%26+Exhibition+Centre"></iframe> -->
 				<div id="map"></div>
 
  				<div class="row container-fluid">
@@ -344,25 +440,25 @@
 
 	 						<div class="row">
 
-	 							<div class="col-xs-1 col-md-2">
+	 							<div class="col-xs-2">
 	 								<i class="fa fa-map-marker fa-2x"></i>
 	 							</div>
 
-	 							<div class="col-xs-11 col-md-10">
-	 								&lt;event-address&gt;
+	 							<div class="col-xs-10">
+	 								Suntec Convention &amp; Exhibition Center, 1 Raffles Boulevard, Suntec City, 039593
 	 							</div>
 	 						</div>
 
 	 						<div class="row">
 
-	 							<div class="col-xs-1 col-md-2">
+	 							<div class="col-xs-2">
 	 								<i class="fa fa-envelope fa-2x"></i>
 	 							</div>
 
-	 							<div class="col-xs-11 col-md-10">
+	 							<div class="col-xs-10">
 	 								Email Us:
 	 								<br>
-	 								<a href="#">&lt;email-address&gt;</a>
+	 								<a href="#">{Email Address}</a>
 	 							</div>
 	 						</div>
 	 					</div>
@@ -381,7 +477,7 @@
 	 							<label for="depart">
 	 								Departing From:
 	 							</label>
-	 							<input type="text" class="form-control" id="origin">
+	 							<input type="text" class="form-control" title="Select the dropdown location for better navigation accuracy" id="origin">
 	 						</div>
 
 	 						<div class="form-group">
@@ -389,7 +485,7 @@
 	 							<label for="via">
 	 								Via (Optional):
 	 							</label>
-	 							<input type="text" class="form-control" id="via">
+	 							<input type="text" class="form-control" title="Select the dropdown location for better navigation accuracy" id="via">
 	 						</div>
 
 	 						<div class="form-group">
@@ -431,7 +527,7 @@
 			 						</div>
 			 					</div>
 
-			 					<button type="button" class="btn btn-primary" onclick="getRoute()">
+			 					<button type="button" class="btn btn-primary" id="get-route" onclick="getRoute(event)">
 			 						Get Directions
 			 					</button>
 	 						</div>
@@ -447,36 +543,6 @@
  						</h4>
 
  						<div class="container-fluid">
-
-							<!-- <div class="panel panel-default"> -->
-
-								<!-- <ul class="nav nav-tabs">
-
-									<li class="active" data-toggle="tab"><a href="#tab-1"><i class="fa fa-car"></i></a></li>
-									<li class=""><a href="#tab-2" data-toggle="tab"><i class="fa fa-train"></i></a></li>
-									<li class=""><a href="#tab-3" data-toggle="tab"><i class="fa fa-bicycle"></i></a></li>
-									<li class=""><a href="#tab-4" data-toggle="tab"><i class="fa fa-male"></i></a></li>
-								</ul>
-
-								
-								<div class="container-fluid">
-
-									<div class="tab-content" id="schedule-tab-content">
-
-
-										<div class="tab-pane fade in active" id="tab-1">
-										</div>
-
-										<div class="tab-pane fade" id="tab-2">
-										</div>
-
-										<div class="tab-pane fade" id="tab-3">
-										</div>
-
-										<div class="tab-pane fade" id="tab-4">
-										</div>
-									</div>
-								</div> -->
 									
 							<ul class="" id="mode">
 								<li class=""><i class="fa fa-car"></i></li><li><i class="fa fa-train"></i></li><li><i class="fa fa-bicycle"></i></li><li><i class="fa fa-male"></i></li>
@@ -500,7 +566,7 @@
 
 
 
-		<p>&lt;event-slogan&gt;</p>
+		<p>Be part of the Future of Money!</p>
 
 		<hr class="grey-bottom">
 
@@ -508,9 +574,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="res/js/jquery.easing.min.js"></script>
 		<script src="res/js/app.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKJyNP-diLPyMwjJkB-vOa0CZBHYaf1cE&libraries=places&callback=initMap" async defer></script>
-<!-- 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKJyNP-diLPyMwjJkB-vOa0CZBHYaf1cE&region=SG&callback=initMap" async defer></script>		
- -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKJyNP-diLPyMwjJkB-vOa0CZBHYaf1cE&amp;sensor=false&amp;libraries=places&amp;callback=initMap" async defer></script>
 	</body>
 
 	<footer class="footer">
@@ -519,7 +583,7 @@
 		<div class="container">
 			
 			<p class="text-muted">
-				<i class="fa fa-copyright"></i> 1999-2014 PayPal. All rights reserved
+				&copy; 1999<script>new Date().getFullYear()>1999&&document.write("-"+new Date().getFullYear());</script> PayPal. All rights reserved
 				<span><a href="https://www.paypal.com/us/webapps/mpp/ua/privacy-full">Privacy</a></span>
 				<span><a href="https://www.paypal.com/us/webapps/mpp/ua/legalhub-full">Legal</a></span>
 				<br>

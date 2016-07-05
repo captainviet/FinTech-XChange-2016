@@ -1,44 +1,41 @@
 /* font face */
+/*Paypal Sans Big*/
 @font-face {
-	font-family: paypalsans-bold;
-	src: url("../font/PayPalSansBig-Bold.otf") format("opentype");
+  font-family: "pp-sans-big-bold";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Bold.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Bold.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Bold.svg") format("svg");
 }
-
 @font-face {
-	font-family: paypalsans-light;
-	src: url("../font/PayPalSansBig-Light.otf") format("opentype");
+  font-family: "pp-sans-big-light";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Light.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Light.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Light.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Light.svg") format("svg");
 }
-
 @font-face {
-	font-family: paypalsans-medium;
-	src: url("../font/PayPalSansBig-Medium.otf") format("opentype");
+  font-family: "pp-sans-big-medium";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.svg") format("svg");
 }
-
 @font-face {
-	font-family: paypalsans-regular;
-	src: url("../font/PayPalSansBig-Regular.otf") format("opentype");
+  font-family: "pp-sans-big-regular";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Regular.svg") format("svg");
 }
-
 @font-face {
-	font-family: paypalsans-thin;
-	src: url("../font/PayPalSansBig-Thin.otf") format("opentype");
+  font-family: "pp-sans-big-thin";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Thin.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Thin.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Thin.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Thin.svg") format("svg");
 }
 
 
 /* HTML element */
 body {
 	/* TODO: ... */
-	background-image: url("../img/background.jpg");
-	background-color: #e6e4e6;
-	background-repeat: no-repeat;
-	background-size: 450%;
-	background-position: center top;
+	background: #e6e4e6 url("../img/background.jpg") no-repeat center top /450%;
 	padding-top: 400px;
 }
 
 tbody {
-	font-family: paypalsans-medium;
-	font-size: 16px;
+	font: 13px pp-sans-big-medium;
 	color: #3c3c3c; /* color?? */
 }
 
@@ -48,13 +45,12 @@ table {
 
 body > p {
 	text-align: center;
-	font-family: paypalsans-regular;
-	font-size: 32px;
+	font: 29px pp-sans-big-regular;
 }
 
 body > div:nth-child(2) {
-	font-family: paypalsans-light;
-	font-weight: lighter;
+	font: lighter pp-sans-big-light;
+	text-shadow: 1px 1px #000000;
 	text-align: center;
 	color: white;
 	position: relative;
@@ -76,7 +72,12 @@ hr.blue-top {
 }
 
 footer > div > p > span {
-	padding-left: 10px;
+	margin: 0;
+	margin-top: 5px;
+}
+
+div .read-more {
+	width: 80%;
 }
 
 /* class */
@@ -87,7 +88,11 @@ footer > div > p > span {
 
 .container {
 	width: 100%;
-	padding: 0;
+	opacity: 0.9;
+}
+
+.navbar-fixed-top {
+	width: initial;
 }
 
 .navbar-fixed-top > .container {
@@ -103,8 +108,7 @@ footer > div > p > span {
 }
 
 .name {
-	font-weight: bolder;
-	font-size: 15px;
+	font: bolder 12px;
 	padding: 5px;
 }
 
@@ -112,25 +116,20 @@ footer > div > p > span {
 	font-size: 11px;
 }
 
-.list-marker {
-	width: 10px;
-	text-align: center;
-}
-
 .horizontal > div > div > div > p {
 	padding: 2%;
 }
 
 .panel-heading > h3 {
-	font-size: 40px;
-	font-family: paypalsans-light;
+	font: 35px pp-sans-big-light;
 	color: #444444;
+	margin: auto;
+	padding: 1%;
 }
 
 .panel-title-cust {
-	height: 30px;
-	font-family: paypalsans-medium;
-	font-size: 21px;
+	height: 25px;
+	font: 21px pp-sans-big-medium;
 }
 
 .underline {
@@ -146,9 +145,8 @@ footer > div > p > span {
 }
 
 .navbar-brand > img {
-	height: 200%; 
-	position: relative; 
-	top: -10px
+	height: 100%; 
+	
 }
 
 .box > .row {
@@ -164,36 +162,41 @@ footer > div > p > span {
 .venue-info {
 	padding: 2%;
 	margin: 0;
-	font-family: paypalsans-regular;
-	font-size: 16px;
+	font: 13px pp-sans-big-regular;
+}
+
+.panel-body {
+	padding: 3%;
 }
 
 .panel-body > p:nth-child(1) {
 	color: #6a6a6a;
-	font-family: paypalsans-light;
-	font-size: 18px;
+	font: 15px pp-sans-big-light;
+	margin-bottom: 5px;
 }
 
-.panel-body > p:nth-child(2) {
-	font-family: paypalsans-medium;
-	font-size: 24px;
+.panel-body > p:nth-child(3) {
+	font: 16px pp-sans-big-medium;
 }
 
 .wrapper > p {
-	font-weight: bolder;
-	font-size: 20px;
+	font: bolder 17px;
 }
 
 .form-group > button {
 	width: 100%;
 }
 
-.jumbotron {
-	font-family: paypalsans-light;
-	font-size: 10px;
+.speaker-info {
+	font: 7px pp-sans-big-light;
 	color: #3c3c3c; /* color?? */
-	padding: 1%;
+	padding: 3%;
 	margin-bottom: 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .thumbnail {
@@ -201,17 +204,37 @@ footer > div > p > span {
 }
 
 .thumbnail > p {
-	font-family: paypalsans-bold;
-	font-size: 18px;
+	font: 15px pp-sans-big-bold;
 }
 
 .thumbnail > p > span {
-	font-family: paypalsans-light;
-	font-size: 15px;s
+	font: 12px pp-sans-big-light;
 }
 
 .tab-pane {
-	padding: 5px;
+	padding: 7px;
+}
+
+.fa-ul {
+	font: FontAwesome;
+}
+
+.col-xs-2 {
+	text-align: center;
+}
+
+.read-more {
+	display: block;
+}
+
+.read-more-text {
+	display: none;
+}
+
+.col-md-4 > a > img {
+	margin: 0;
+	height: 300px;
+	size: 100%;
 }
 
 /* id */
@@ -222,7 +245,7 @@ footer > div > p > span {
 }
 
 #navbar-ppil > ul > li > a {
-	font-family: paypalsans-bold;
+	font: pp-sans-big-bold;
 	text-transform: uppercase;
 	color: #444444;
 }
@@ -269,15 +292,61 @@ footer > div > p > span {
 }
 
 #event-name {
-	font-size: 30px;
+	font: 30px;
 }
 
 #event-loc {
-	font-size: 20px;
+	font: 20px;
 }
 
 #event-time {
-	font-size: 17px;
+	font: 17px;
+}
+
+#speaker-heading > div > .container-fluid {
+	padding: 0;
+}
+
+/* carousel */
+
+.multi-item-carousel .carousel-inner > .item {
+	-webkit-transition: 500ms ease-in-out left;
+  	transition: 500ms ease-in-out left;
+}
+
+.multi-item-carousel .carousel-inner .active.left {
+  	left: -100%;
+}
+
+.multi-item-carousel .carousel-inner .active.right {
+  	left: 100%;
+}
+
+.multi-item-carousel .carousel-inner .next {
+  	left: 100%;
+}
+
+.multi-item-carousel .carousel-inner .prev {
+  	left: -100%;
+}
+
+@media all and (transform-3d), (-moz-transform-3d), (-webkit-transform-3d) {
+  	.multi-item-carousel .carousel-inner > .item {
+	    -webkit-transition: 500ms ease-in-out all;
+	    -moz-transition: -moz-transform 500ms ease-in-out all;
+	    		transition: 500ms ease-in-out all;
+	    -webkit-backface-visibility: visible;
+	    -moz-backface-visibility: -moz-transform visible;
+	            backface-visibility: visible;
+	    -webkit-transform: none!important;
+	    -moz-transform: none!important;
+	            transform: none!important;
+  	}
+}
+
+.multi-item-carousel .carouse-control.left,
+.multi-item-carousel .carouse-control.right {
+  	background-image: none;
 }
 
 
@@ -340,12 +409,72 @@ footer > div > p > span {
 	}
 
 	.container {
-		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 
-	#map {
-		height: 300px;
-		width: 100%;
+	.read-more {
+		display: none;
+	}
+
+	.read-more-text {
+		display: inline;
+	}
+
+	tbody {
+		font-size: 16px;
+	}
+
+	body > p {
+		font-size: 32px;
+	}
+
+	.name {
+		font-size: 15px;
+	}
+
+	.text-muted {
+		font-size: 13px;
+	}
+
+	.horizontal > div > div > div > p {
+		padding: 2%;
+	}
+
+	.panel-heading > h3 {
+		font-size: 40px;
+	}
+
+	.panel-title-cust {
+		font-size: 21px;
+	}
+
+	.venue-info {
+		font-size: 16px;
+	}
+
+	.panel-body > p:nth-child(1) {
+		font-size: 15px;
+	}
+
+	.panel-body > p:nth-child(2) {
+		font-size: 18px;
+	}
+
+	.wrapper > p {
+		font-size: 20px;
+	}
+
+	.speaker-info {
+		font-size: 10px;
+	}
+
+	.thumbnail > p {
+		font-size: 18px;
+	}
+
+	.thumbnail > p > span {
+		font-size: 15px;
 	}
 
 	#event-name {
@@ -377,9 +506,33 @@ footer > div > p > span {
 		top: -275px;
 	}
 
-	.container {
-		width: 80%;
+	.navbar-brand > img {
+		height: 200%;
+		position: relative; 
+		top: -10px;
 	}
+
+	.container {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.multi-item-carousel .carousel-inner .active.left {
+	  	left: -50%;
+	}
+
+	.multi-item-carousel .carousel-inner .active.right {
+	  	left: 50%;
+	}
+
+	.multi-item-carousel .carousel-inner .next {
+	  	left: 50%;
+	}
+
+	.multi-item-carousel .carousel-inner .prev {
+	  	left: -50%;
+	}
+
 
 	#map {
 		height: 450px;
@@ -400,20 +553,42 @@ footer > div > p > span {
 
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 992px) {
 	body {
 		background-size: 150%;
 	}
+
+	.multi-item-carousel .carousel-inner .active.left {
+		left: -33%;
+	}
+
+	.multi-item-carousel .carousel-inner .active.right {
+		left: 33%;
+	}
+
+	.multi-item-carousel .carousel-inner .next {
+		left: 33%;
+	}
+
+	.multi-item-carousel .carousel-inner .prev {
+		left: -33%;
+	}
+
 }
 
 @media only screen and (min-width: 1024px) {
 	body {
 		padding-top: 250px;
-		background-size: 100%;
+		background-size: 150%;
 	}
 
 	body > div:nth-child(2) {
 		top: -175px;
+	}
+
+	.about-heading .panel-body {
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 /*	
@@ -455,5 +630,17 @@ footer > div > p > span {
 		font-size: 18px;
 	}
 */
+
+}
+
+@media only screen and (min-width: 1150px) {
+	body {
+		padding-top: 350px;
+	}
+
+		body > div:nth-child(2) {
+		top: -275px;
+	}
+
 
 }

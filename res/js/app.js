@@ -1,18 +1,151 @@
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
 
+    // Enable smooth navigation with navbar
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+            scrollTop: $($anchor.attr('href')).offset().top - 50
+        }, 2000, 'easeInOutExpo');
         event.preventDefault();
     });
 
-    $(".navbar-nav").on("click", function() {
-        $(".navbar-toggle").click();
+    // Enable auto map-focus upon directions query
+    $("#get-route").bind("click", function(event) {
+        $("html, body").stop().animate({
+            scrollTop: $("#venue-heading").offset().top - 50
+        }, 2000, 'easeInOutExpo');
     })
+
+    // Auto-toggle navbar-collapse on mobile device
+    $(".navbar-nav").on("click", function() {
+        if ($(window).width() < 768) {
+            $(".navbar-toggle").click();
+        }
+    });
+
+    // Show More functionality
+    $(".read-more").click(function() {
+        var read_more_id = this.id;
+        var type = $(this).prop("tagName").toLowerCase();
+        if (type == "img") {
+            imgReadMore(read_more_id);
+        } else {
+            pReadMore(read_more_id);
+        }
+    });
+
+    // Show more for text
+    function pReadMore(id) {
+        $("#" + id).hide();
+        $("#" + id + "-info").show();
+    }
+
+    // Show more for image
+    function imgReadMore(id) {
+        $("#" + id).animate({
+            opacity: 0.2,
+        }, {
+            duration: 500,
+            queue: false,
+        });
+        $("#" + id + "-info").animate({
+            opacity: 1,
+        }, {
+            duration: 500,
+            queue: false,
+        });
+    };
+
+    // Hide info text on image when tap out
+    $(document).click(function(e) {
+        var id = e.target.id;
+        var img = ["rohan-img", "iswaran-img"];
+        for (var i = 0; i < img.length; i++) {
+            if (id != img[i]) {
+                $("#" + img[i]).animate({
+                    opacity: 1,
+                }, {
+                    duration: 500,
+                    queue: false,
+                });
+                $("#" + img[i] + "-info").animate({
+                    opacity: 0,
+                }, {
+                    duration: 500,
+                    queue: false,
+                });
+            }
+        }
+    });
+
+    // Bootstrap Carousel
+    // Instantiate the Bootstrap carousel
+    $('.multi-item-carousel').carousel({
+        interval: false
+    });
+
+    // for every slide in carousel, copy the next slide's item in the slide.
+    // Do the same for the next, next item.
+    $('.multi-item-carousel .item').each(function(){
+        var cur = $(this);
+        var next = cur.next();
+        if ($(window).width() >= 768) {
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+            if ($(window).width() >= 992) {
+                if (next.next().length>0) {
+                    next.next().children(':first-child').clone().appendTo($(this));
+                } else {
+                    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+                }
+            }
+        }
+    });
+
+    // Parallax Scrolling
+    $(window).on('scroll', function() {
+        smoothBackgroundScroll("res/img/background.jpg", ratio);
+    });
+
+    function smoothBackgroundScroll(imgsrc, ratio) {
+        
+        scrollTop = $(document).scrollTop();
+        pos_y = scrollTop * ratio;
+        document.body.style.backgroundPosition = 'center ' + pos_y + 'px';
+    }
+
 });
+
+// Compute transition ratio
+var documentHeight, windowHeight, imageHeight, backgroundHeight, backgroundWidth;
+var bcksize = $(document.body).css('background-size');
+var bmatch = /(\w+)\s*(\w+)/.exec(bcksize);
+if (!bmatch || bmatch.length < 3) {
+    backgroundHeight = loadImageHeight(imgsrc)
+} else {
+    backgroundHeight = parseInt(bmatch[2]);
+    if (isNaN(backgroundHeight)) {
+        backgroundWidth = parseInt(bmatch[1]);
+        backgroundHeight = loadImageHeight(imgsrc, parseInt(backgroundWidth));
+    }
+}
+
+documentHeight = $(document).height();
+windowHeight = $(window).height();
+imageHeight = backgroundHeight;
+var ratio = (documentHeight - windowHeight) / (documentHeight - imageHeight);
+
+function loadImageHeight(url, width) {
+            var img = new Image();
+            img.src = url;
+            if (width) {
+                img.width = width;
+            }
+            return img.height;
+        }
 
 // global variables for map manipulation
 var autocompleteOrigin, autocompleteVia, map, directionsDisplay;
@@ -73,10 +206,9 @@ function initMap() {
     directionsDisplay = new google.maps.DirectionsRenderer(options);
     directionsDisplay.setMap(map);
 
-
 };
 
-function getRoute() {
+function getRoute(event) {
 
 
     event.preventDefault();
@@ -103,7 +235,20 @@ function getRoute() {
         // console.log(via);
         var mode = $("input[name='mode']:checked").val();
         // console.log(mode);
-
+        switch (mode) {
+            case "DRIVING":
+                quarter1();
+                break;
+            case "TRANSIT":
+                quarter2();
+                break;
+            case "BICYCLING":
+                quarter3();
+                break;
+            case "WALKING":
+                quarter4();
+                break;
+        }
         // request compilation
         var request;
         if (mode != "TRANSIT" && via != "") {
@@ -189,23 +334,23 @@ function displayResult(result, mode) {
     switch (mode) {
         case "DRIVING":
             mode = "Drive";
-            quarter1();
             break;
         case "TRANSIT":
             mode = "Ride";
-            quarter2();
             break;
         case "BICYCLING":
             mode = "Cycle";
-            quarter3();
             break;
         case "WALKING":
             mode = "Walk";
-            quarter4();
             break;
     }
     // show route cost in terms of time and distance
-    $("#route-cost").text(mode + " " + (total_distance/1000).toFixed(1) + " km, " + (total_duration/60).toFixed(1) + " min");
+    if (total_duration < 3600) {
+        $("#route-cost").text(mode + " " + (total_distance/1000).toFixed(1) + " km, " + (total_duration/60).toFixed(1) + " min");
+    } else {
+        $("#route-cost").text(mode + " " + (total_distance/1000).toFixed(1) + " km, " + (total_duration/3600).toFixed(0) + " h " + (total_duration/60).toFixed(0) % 60 + " min");
+    }
     // show warnings from GMaps
     if (route.warnings.length != 0) {
         $("#route-warning").text(route.warnings[0]);
@@ -219,16 +364,16 @@ function displayResult(result, mode) {
 
 // function for compiling details for certain legs in route
 function legBuilder(leg) {
-    var result = leg.start_address + "\n" + "<ul>";
+    var result = leg.start_address + "\n" + "<ul class='fa-ul'>";
     var steps = leg.steps;
     var style;
     for (var s = 0; s < steps.length; s++) {
         if (steps[s].instructions.toLowerCase().includes("left")) {
-            style = "<li style='list-style: none'><i class='fa fa-arrow-left list-marker'></i> "
+            style = "<li><i class='fa-li fa fa-arrow-left'></i> "
         } else if (steps[s].instructions.toLowerCase().includes("right")) {
-            style = "<li style='list-style: none'><i class='fa fa-arrow-right list-marker'></i> "
+            style = "<li><i class='fa-li fa fa-arrow-right'></i> "
         } else {
-            style = "<li style='list-style: none'><i class='fa fa-long-arrow-up list-marker'></i> ";
+            style = "<li><i class='fa-li fa fa-long-arrow-up'></i> ";
         }
         var instruction = style + steps[s].instructions + "</li>";
         result += instruction;
@@ -249,4 +394,4 @@ function displayError(errorMessage) {
 // This example displays an address form, using the autocomplete feature 
 // of the Google Places API to help users fill in the information. 
 // This example requires the Places library. Include the libraries=places 
-// parameter when you first load the API. For example: // 
+// parameter windowHeighten you first load the API. For example: // 
