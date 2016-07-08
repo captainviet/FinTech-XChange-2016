@@ -106,46 +106,88 @@ $(function() {
     });
 
     // Parallax Scrolling
-    $(window).on('scroll', function() {
-        smoothBackgroundScroll("res/img/background.jpg", ratio);
-    });
+    // var ratio;
+    // $(window).on("load", function() {
+    //     ratio = calRatio();
+    // });
 
-    function smoothBackgroundScroll(imgsrc, ratio) {
+    // $(window).on("scroll", function(event) {
+    //     event.preventDefault();
+    //     smoothBackgroundScroll();
+    // });
+
+    // $(window).on("resize", function() {
+    //     ratio = calRatio();
+    // })
+
+    // function calRatio() {
+    //     var bodyImgURL = "res/img/background.jpg", image;
+    //     img = new Image();
+    //     img.src = bodyImgURL;
+    //     var aspect = img.height / img.width;
+    //     var effective_height = aspect * $(window).width() * 1.25;
+    //     if (effective_height < $(window).height()) {
+    //         return 1;
+    //     } else {
+    //         return ($(document).height() - effective_height) / ($(document).height() - $(window).height());
+    //     }
+
+    // }
+
+    // function smoothBackgroundScroll() {
         
-        scrollTop = $(document).scrollTop();
-        pos_y = scrollTop * ratio;
-        document.body.style.backgroundPosition = 'center ' + pos_y + 'px';
-    }
+    //     scrollTop = $(document).scrollTop();
+    //     var pos_y = scrollTop * ratio;
+    //     $("body").css("background-position", 'center ' + pos_y + 'px');
+    // }
 
 });
 
 // Compute transition ratio
-var documentHeight, windowHeight, imageHeight, backgroundHeight, backgroundWidth;
-var bcksize = $(document.body).css('background-size');
-var bmatch = /(\w+)\s*(\w+)/.exec(bcksize);
-if (!bmatch || bmatch.length < 3) {
-    backgroundHeight = loadImageHeight(imgsrc)
-} else {
-    backgroundHeight = parseInt(bmatch[2]);
-    if (isNaN(backgroundHeight)) {
-        backgroundWidth = parseInt(bmatch[1]);
-        backgroundHeight = loadImageHeight(imgsrc, parseInt(backgroundWidth));
-    }
-}
+// var documentHeight, windowHeight, imageHeight, backgroundHeight, backgroundWidth;
+// var bcksize = $(document.body).css('background-size');
+// var bmatch = /(\w+)\s*(\w+)/.exec(bcksize);
+// if (!bmatch || bmatch.length < 3) {
+//     backgroundHeight = loadImageHeight(imgsrc)
+// } else {
+//     backgroundHeight = parseInt(bmatch[2]);
+//     if (isNaN(backgroundHeight)) {
+//         backgroundWidth = parseInt(bmatch[1]);
+//         backgroundHeight = loadImageHeight(imgsrc, parseInt(backgroundWidth));
+//     }
+// }
 
-documentHeight = $(document).height();
-windowHeight = $(window).height();
-imageHeight = backgroundHeight;
-var ratio = (documentHeight - windowHeight) / (documentHeight - imageHeight);
+// documentHeight = $(document).height();
+// windowHeight = $(window).height();
+// imageHeight = backgroundHeight;
+// var ratio = (documentHeight - windowHeight) / (documentHeight - imageHeight);
 
-function loadImageHeight(url, width) {
-            var img = new Image();
-            img.src = url;
-            if (width) {
-                img.width = width;
-            }
-            return img.height;
-        }
+// function loadImageHeight(url, width) {
+//             var img = new Image();
+//             img.src = url;
+//             if (width) {
+//                 img.width = width;
+//             }
+//             return img.height;
+//         }
+
+// (function(){
+
+//   var parallax = document.querySelectorAll("body"),
+//       speed = 0.5;
+
+//   window.onscroll = function(){
+//     [].slice.call(parallax).forEach(function(el,i){
+
+//       var windowYOffset = window.pageYOffset,
+//           elBackgrounPos = "0 " + (windowYOffset * speed) + "px";
+      
+//       el.style.backgroundPosition = elBackgrounPos;
+
+//     });
+//   };
+
+// })();
 
 // global variables for map manipulation
 var autocompleteOrigin, autocompleteVia, map, directionsDisplay;
