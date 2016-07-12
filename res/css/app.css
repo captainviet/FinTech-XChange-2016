@@ -30,7 +30,8 @@
 /* HTML element */
 body {
 	/* TODO: ... */
-	background: #e6e4e6 url("../img/background.png") no-repeat center top /125%;
+	background: transparent url("../img/background.png") no-repeat center 10vh;
+	background-size: 50vh;
 	padding-top: 400px;
 }
 
@@ -49,8 +50,12 @@ body > p {
 }
 
 body > div:nth-child(2) {
-	font: lighter pp-sans-big-light;
-	text-shadow: 1px 1px #000000;
+	font: pp-sans-big-light 30px;
+	text-shadow: 1px 2px #000000;
+	-webkit-text-stroke-width: 1px;
+	-moz-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ececec;
+	-moz-text-stroke-width: #ececec;
 	text-align: center;
 	color: white;
 	position: relative;
@@ -199,15 +204,22 @@ div .read-more {
 	pointer-events: none;
 }
 
-.thumbnail {
-	margin: auto;
+.headshot {
+	text-align: center;	
 }
 
-.thumbnail > p {
+.headshot > img {
+	max-width: 60%;
+/*	border-radius: 50%;
+	border: medium solid #40c4ff;*/
+}
+
+.headshot > p {
 	font: 15px pp-sans-big-bold;
 }
 
-.thumbnail > p > span {
+
+.headshot > p > span {
 	font: 12px pp-sans-big-light;
 }
 
@@ -236,6 +248,11 @@ div .read-more {
 	height: 300px;
 	size: 100%;
 }
+
+.container-fluid > .row {
+	padding: 2%;
+}
+
 
 /* id */
 
@@ -562,13 +579,13 @@ div .read-more {
 
 @media only screen and (min-width: 1024px) {
 	body {
-		padding-top: 250px;
-		background-size: 90%;
-		background-position: center -7%;
+		padding-top: 300px;
+/*		background-size: 90%;
+*/
 	}
 
 	body > div:nth-child(2) {
-		top: -175px;
+		top: -225px;
 	}
 
 	.about-heading .panel-body {
