@@ -30,9 +30,9 @@
 /* HTML element */
 body {
 	/* TODO: ... */
-	background: url("../img/background.png") no-repeat center 10vh;
+	background: url("../img/background.png") no-repeat center 30vh;
 	background-size: 50vh;
-	padding-top: 400px;
+	padding-top: 50vh;
 }
 
 tbody {
@@ -50,15 +50,15 @@ body > p {
 }
 
 body > div:nth-child(2) {
-	font: pp-sans-big-light 30px;
+	font: 30px pp-sans-big-light;
 /*	-webkit-text-stroke-width: 1px;
 	-moz-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #40c4ff;
 	-moz-text-stroke-width: #ececec;
 */	text-align: center;
 	position: relative;
-	top: -330px;
-	left: 5%;
+	top: -40vh;
+	margin: auto;
 	width: 90%;
 	background: rgba(255, 255, 255, 0.6);
 }
@@ -392,6 +392,15 @@ div .read-more {
 
 @media only screen and (min-width: 350px) {
 
+	body {
+		padding-top: 70vh;
+	}
+
+	body > div:nth-child(2) {
+		top: -60vh;
+	}
+
+
 	#event-name {
 		font-size: 33px;
 	}
@@ -407,6 +416,14 @@ div .read-more {
 }
 
 @media only screen and (min-width: 420px) {
+
+	body {
+		padding-top: 60vh;
+	}
+
+	body > div:nth-child(2) {
+		top: -50vh;
+	}
 
 	#event-name {
 		font-size: 35px;
@@ -425,7 +442,7 @@ div .read-more {
 @media only screen and (min-width: 500px) {
 
 	body > div:nth-child(2) {
-		top: -300px;
+		top: -45vh;
 	}
 
 	.container {
@@ -518,7 +535,11 @@ div .read-more {
 @media only screen and (min-width: 768px) {
 
 	body > div:nth-child(2) {
-		top: -275px;
+		top: -50vh;
+	}
+
+	body {
+		padding-top: 60vh;
 	}
 
 	.navbar-brand > img {
@@ -531,7 +552,7 @@ div .read-more {
 		padding-left: 10%;
 		padding-right: 10%;
 	}
-
+/*
 	.multi-item-carousel .carousel-inner .active.left {
 	  	left: -50%;
 	}
@@ -547,7 +568,7 @@ div .read-more {
 	.multi-item-carousel .carousel-inner .prev {
 	  	left: -50%;
 	}
-
+*/
 
 	#map {
 		height: 450px;
@@ -567,7 +588,7 @@ div .read-more {
 	}
 
 }
-
+/*
 @media only screen and (min-width: 992px) {
 
 	.multi-item-carousel .carousel-inner .active.left {
@@ -586,17 +607,15 @@ div .read-more {
 		left: -33%;
 	}
 
-}
+}*/
 
 @media only screen and (min-width: 1024px) {
 	body {
-		padding-top: 300px;
-/*		background-size: 90%;
-*/
+		padding-top: 70vh;
 	}
 
 	body > div:nth-child(2) {
-		top: -225px;
+		top: -60vh;
 	}
 
 	.about-heading .panel-body {
@@ -648,11 +667,11 @@ div .read-more {
 
 @media only screen and (min-width: 1150px) {
 	body {
-		padding-top: 350px;
+		padding-top: 70vh;
 	}
 
-		body > div:nth-child(2) {
-		top: -275px;
+	body > div:nth-child(2) {
+		top: -60vh;
 	}
 
 
