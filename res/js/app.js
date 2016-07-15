@@ -401,6 +401,7 @@ function displayResult(result, mode) {
     }
     // show route details (navigation)
     $("#route-details").html(details);
+    autocompleteVia.set("place", null);
 
 };
 
