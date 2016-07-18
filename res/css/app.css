@@ -37,7 +37,7 @@ body {
 
 tbody {
 	font: 13px pp-sans-big-medium;
-	color: #3c3c3c; /* color?? */
+	color: #3c3c3c;
 }
 
 table {
@@ -52,11 +52,7 @@ body > p {
 body > div:nth-child(2) {
 	font: 30px pp-sans-big-light;
 	color: #363b3e;
-/*	-webkit-text-stroke-width: 1px;
-	-moz-text-stroke-width: 1px;
-	-webkit-text-stroke-color: #40c4ff;
-	-moz-text-stroke-width: #ececec;
-*/	text-align: center;
+	text-align: center;
 	position: relative;
 	top: -10vh;
 	margin: auto;
@@ -152,14 +148,10 @@ div .read-more {
 	pointer-events: none;
 }
 
-.navbar-brand > img {
-	height: 100%; 
-	
-}
-
 .navbar-brand {
 	padding: 0;
 }
+
 
 .box > .row {
 	padding: 5%;
@@ -179,15 +171,12 @@ div .read-more {
 
 .panel-body {
 	padding: 3%;
-}
-
-.panel-body > p:nth-child(1) {
 	color: #6a6a6a;
 	font: 15px pp-sans-big-light;
 	margin-bottom: 5px;
 }
 
-.panel-body > p:nth-child(3) {
+.panel-body > p:nth-child(12) {
 	font: 16px pp-sans-big-medium;
 }
 
@@ -201,7 +190,7 @@ div .read-more {
 
 .speaker-info {
 	font: 7px pp-sans-big-light;
-	color: #3c3c3c; /* color?? */
+	color: #3c3c3c;
 	padding: 3%;
 	margin-bottom: 0px;
 	position: absolute;
@@ -214,13 +203,10 @@ div .read-more {
 .headshot {
 	text-align: center;
 	padding: 0;
-	min-height: 295px;
 }
 
 .headshot > img {
 	max-width: 80%;
-/*	border-radius: 50%;
-	border: medium solid #40c4ff;*/
 }
 
 .headshot > p {
@@ -288,13 +274,41 @@ div .read-more {
 	border-radius: 5%;
 	max-width: 100%;
 	margin-right: 2%;
-	margin-bottom: 2%;
 	float: left;
 }
 
-/*.modal-body p:first-letter {
-	font: 30px pp-sans-big-bold;
-}*/
+.striked-header {
+	position: relative;
+	text-align: center;
+	font: 2.5rem pp-sans-big-bold;
+}
+
+.striked-header span {
+	background: #fff;
+	padding: 0 15px;
+	position: relative;
+	z-index: 1;
+}
+
+.striked-header:before {
+	background: #ddd;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 90%;
+}
+
+.panel-body > h4 {
+	text-align: center;
+	font-style: italic;
+}
+
+.panel-body > h5 {
+	font-weight: bolder;
+}
 
 /* id */
 
@@ -366,50 +380,6 @@ div .read-more {
 	padding: 0;
 }
 
-/* carousel */
-
-/*.multi-item-carousel .carousel-inner > .item {
-	-webkit-transition: 500ms ease-in-out left;
-  	transition: 500ms ease-in-out left;
-}
-
-.multi-item-carousel .carousel-inner .active.left {
-  	left: -100%;
-}
-
-.multi-item-carousel .carousel-inner .active.right {
-  	left: 100%;
-}
-
-.multi-item-carousel .carousel-inner .next {
-  	left: 100%;
-}
-
-.multi-item-carousel .carousel-inner .prev {
-  	left: -100%;
-}
-*/
-/*@media all and (transform-3d), (-moz-transform-3d), (-webkit-transform-3d) {
-  	.multi-item-carousel .carousel-inner > .item {
-	    -webkit-transition: 500ms ease-in-out all;
-	    -moz-transition: -moz-transform 500ms ease-in-out all;
-	    		transition: 500ms ease-in-out all;
-	    -webkit-backface-visibility: visible;
-	    -moz-backface-visibility: -moz-transform visible;
-	            backface-visibility: visible;
-	    -webkit-transform: none!important;
-	    -moz-transform: none!important;
-	            transform: none!important;
-  	}
-}
-
-.multi-item-carousel .carouse-control.left,
-.multi-item-carousel .carouse-control.right {
-  	background-image: none;
-}
-*/
-/* Parallax */
-
 /* Mobile-first */
 
 @media(min-width:767px) {
@@ -465,7 +435,7 @@ div .read-more {
 	}
 
 	.read-more-text {
-		display: inline;
+		display: block;
 	}
 
 	.name {
@@ -492,11 +462,11 @@ div .read-more {
 		font-size: 16px;
 	}
 
-	.panel-body > p:nth-child(1) {
+	.panel-body {
 		font-size: 15px;
 	}
 
-	.panel-body > p:nth-child(2) {
+	.panel-body > p:nth-child(12) {
 		font-size: 18px;
 	}
 
@@ -544,10 +514,6 @@ div .read-more {
 		top: 0;
 	}
 
-	.headshot {
-		min-height: 290px;
-	}
-
 	#event-name {
 		font-size: 33px;
 	}
@@ -564,17 +530,6 @@ div .read-more {
 
 @media only screen and (min-width: 420px) {
 
-/*	body {
-		padding-top: 60vh;
-	}
-
-	body > div:nth-child(2) {
-		top: -50vh;
-	}
-*/
-	.headshot {
-		min-height: 295px;
-	}
 	#event-name {
 		font-size: 35px;
 	}
@@ -590,11 +545,6 @@ div .read-more {
 }
 
 @media only screen and (min-width: 500px) {
-
-/*	body > div:nth-child(2) {
-		top: -45vh;
-	}
-*/
 
 	tbody {
 		font-size: 16px;
@@ -614,7 +564,7 @@ div .read-more {
 	}
 
 	.read-more-text {
-		display: inline;
+		display: block;
 	}
 
 	.name {
@@ -641,11 +591,11 @@ div .read-more {
 		font-size: 16px;
 	}
 
-	.panel-body > p:nth-child(1) {
+	.panel-body {
 		font-size: 15px;
 	}
 
-	.panel-body > p:nth-child(2) {
+	.panel-body > p:nth-child(12) {
 		font-size: 18px;
 	}
 
@@ -667,10 +617,6 @@ div .read-more {
 
 	.modal-body img {
 		max-width: 50%;
-	}
-
-	.headshot {
-		min-height: 320px;
 	}
 
 	#map {
@@ -696,54 +642,19 @@ div .read-more {
 	.modal-body img {
 		max-width: 30%;
 	}
-
-	.headshot {
-		min-height: 360px;
-	}
 }
 
 @media only screen and (min-width: 768px) {
 
-/*	body > div:nth-child(2) {
-		top: -50vh;
-	}
-
-	body {
-		padding-top: 60vh;
-	}
-*/
-/*	.navbar-brand > img {
-		height: 200%;
-		position: relative; 
-		top: -10px;
-	}
-*/
 	.modal-dialog {
 		margin-left: 20%;
 		width: 60%;
 	}
 
-	.headshot {
-		min-height: 320px;
+	.striked-header:before {
+		left: 10%;
+		width: 80%;
 	}
-
-/*
-	.multi-item-carousel .carousel-inner .active.left {
-	  	left: -50%;
-	}
-
-	.multi-item-carousel .carousel-inner .active.right {
-	  	left: 50%;
-	}
-
-	.multi-item-carousel .carousel-inner .next {
-	  	left: 50%;
-	}
-
-	.multi-item-carousel .carousel-inner .prev {
-	  	left: -50%;
-	}
-*/
 
 	#map {
 		height: 450px;
@@ -763,32 +674,8 @@ div .read-more {
 	}
 
 }
-/*
-@media only screen and (min-width: 992px) {
-
-	.multi-item-carousel .carousel-inner .active.left {
-		left: -33%;
-	}
-
-	.multi-item-carousel .carousel-inner .active.right {
-		left: 33%;
-	}
-
-	.multi-item-carousel .carousel-inner .next {
-		left: 33%;
-	}
-
-	.multi-item-carousel .carousel-inner .prev {
-		left: -33%;
-	}
-
-}*/
 
 @media only screen and (min-width: 992px) {
-	.headshot {
-		height: 310px;
-	}
-
 	.container {
 		padding-left: 10%;
 		padding-right: 10%;
@@ -819,47 +706,6 @@ div .read-more {
 		margin-left: 25%;
 		width: 50%;
 	}
-
-/*	
-	For mobile first varied font size
-
-	tbody {
-		font-size: 16px;
-	}
-
-	body > p {
-		font-size: 32px;
-	}
-
-	.panel-heading > h3 {
-		font-size: 40px;
-	}
-
-	.panel-title-cust {
-		font-size: 21px;
-	}
-
-	.venue-info {
-		font-size: 16px;
-	}
-
-	.panel-body > p:nth-child(1) {
-		font-size: 18px;
-	}
-
-	.panel-body > p:nth-child(2) {
-		font-size: 24px;
-	}
-
-	.jumbotron {
-		font-size: 14px;
-	}
-
-	.thumbnail > p {
-		font-size: 18px;
-	}
-*/
-
 }
 
 @media only screen and (min-width: 1150px) {
@@ -888,10 +734,6 @@ div .read-more {
 		font-size: 37px;
 	}
 
-
-}
-
-@media only screen and (min-width: 1200px) {
 
 }
 

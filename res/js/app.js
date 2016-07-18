@@ -38,7 +38,7 @@ $(function() {
     // Show more for text
     function pReadMore(id) {
         $("#" + id).hide();
-        $("#" + id + "-info").show();
+        $(".read-more-text").show();
     }
 
     // Show more for image
@@ -57,137 +57,7 @@ $(function() {
         });
     };
 
-    // Hide info text on image when tap out
-    $(document).click(function(e) {
-        var id = e.target.id;
-        var img = ["rohan-img", "iswaran-img"];
-        for (var i = 0; i < img.length; i++) {
-            if (id != img[i]) {
-                $("#" + img[i]).animate({
-                    opacity: 1,
-                }, {
-                    duration: 500,
-                    queue: false,
-                });
-                $("#" + img[i] + "-info").animate({
-                    opacity: 0,
-                }, {
-                    duration: 500,
-                    queue: false,
-                });
-            }
-        }
-    });
-
-    // Bootstrap Carousel
-    // Instantiate the Bootstrap carousel
-    // $('.multi-item-carousel').carousel({
-    //     interval: false
-    // });
-
-    // for every slide in carousel, copy the next slide's item in the slide.
-    // Do the same for the next, next item.
-    // $('.multi-item-carousel .item').each(function(){
-    //     var cur = $(this);
-    //     var next = cur.next();
-    //     if ($(window).width() >= 768) {
-    //         if (!next.length) {
-    //             next = $(this).siblings(':first');
-    //         }
-    //         next.children(':first-child').clone().appendTo($(this));
-    //         if ($(window).width() >= 992) {
-    //             if (next.next().length>0) {
-    //                 next.next().children(':first-child').clone().appendTo($(this));
-    //             } else {
-    //                 $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //             }
-    //         }
-    //     }
-    // });
-
-    // Parallax Scrolling
-    // var ratio;
-    // $(window).on("load", function() {
-    //     ratio = calRatio();
-    // });
-
-    // $(window).on("scroll", function(event) {
-    //     event.preventDefault();
-    //     smoothBackgroundScroll();
-    // });
-
-    // $(window).on("resize", function() {
-    //     ratio = calRatio();
-    // })
-
-    // function calRatio() {
-    //     var bodyImgURL = "res/img/background.jpg", image;
-    //     img = new Image();
-    //     img.src = bodyImgURL;
-    //     var aspect = img.height / img.width;
-    //     var effective_height = aspect * $(window).width() * 1.25;
-    //     if (effective_height < $(window).height()) {
-    //         return 1;
-    //     } else {
-    //         return ($(document).height() - effective_height) / ($(document).height() - $(window).height());
-    //     }
-
-    // }
-
-    // function smoothBackgroundScroll() {
-        
-    //     scrollTop = $(document).scrollTop();
-    //     var pos_y = scrollTop * ratio;
-    //     $("body").css("background-position", 'center ' + pos_y + 'px');
-    // }
-
 });
-
-// Compute transition ratio
-// var documentHeight, windowHeight, imageHeight, backgroundHeight, backgroundWidth;
-// var bcksize = $(document.body).css('background-size');
-// var bmatch = /(\w+)\s*(\w+)/.exec(bcksize);
-// if (!bmatch || bmatch.length < 3) {
-//     backgroundHeight = loadImageHeight(imgsrc)
-// } else {
-//     backgroundHeight = parseInt(bmatch[2]);
-//     if (isNaN(backgroundHeight)) {
-//         backgroundWidth = parseInt(bmatch[1]);
-//         backgroundHeight = loadImageHeight(imgsrc, parseInt(backgroundWidth));
-//     }
-// }
-
-// documentHeight = $(document).height();
-// windowHeight = $(window).height();
-// imageHeight = backgroundHeight;
-// var ratio = (documentHeight - windowHeight) / (documentHeight - imageHeight);
-
-// function loadImageHeight(url, width) {
-//             var img = new Image();
-//             img.src = url;
-//             if (width) {
-//                 img.width = width;
-//             }
-//             return img.height;
-//         }
-
-// (function(){
-
-//   var parallax = document.querySelectorAll("body"),
-//       speed = 0.5;
-
-//   window.onscroll = function(){
-//     [].slice.call(parallax).forEach(function(el,i){
-
-//       var windowYOffset = window.pageYOffset,
-//           elBackgrounPos = "0 " + (windowYOffset * speed) + "px";
-      
-//       el.style.backgroundPosition = elBackgrounPos;
-
-//     });
-//   };
-
-// })();
 
 // global variables for map manipulation
 var autocompleteOrigin, autocompleteVia, map, directionsDisplay;
@@ -226,7 +96,6 @@ function initMap() {
         title: "Suntec Convention & Exhibition Center",
         visible: true
     });
-    // console.log(marker);
     var infoWindow = new google.maps.InfoWindow();
     infoWindow.setContent("<div id='content'><p><strong>Suntec Convention & Exhibition Center</strong></p><p>1 Raffles Boulevard, <span class='street-address'>Suntec City</span>, <span class='country-name'>Singapore</span> <span class='postal-code'>039593</span></p></div>");
     marker.addListener("click", function() {
@@ -258,15 +127,9 @@ function getRoute(event) {
     try {
         // user input collection
         var origin_location = autocompleteOrigin.getPlace().geometry.location;
-        // console.log(origin_location);
-        // console.log(autocompleteOrigin.getPlace().formatted_address);
         var orig = new google.maps.LatLng(origin_location.lat(), origin_location.lng());
-        // console.log(orig.lat(), orig.lng());
         var dest = new google.maps.LatLng(1.2936604, 103.857193);
-        // console.log(dest);
         var directionsService = new google.maps.DirectionsService();
-        // var via = $("#via").val();
-        // console.log(autocompleteVia.getPlace());
         var via;
         if (autocompleteVia.getPlace() == null) {
             via = "";
@@ -274,9 +137,7 @@ function getRoute(event) {
             var via_location = autocompleteVia.getPlace().geometry.location;
             via = new google.maps.LatLng(via_location.lat(), via_location.lng());
         }
-        // console.log(via);
         var mode = $("input[name='mode']:checked").val();
-        // console.log(mode);
         switch (mode) {
             case "DRIVING":
                 quarter1();
@@ -312,19 +173,14 @@ function getRoute(event) {
                 region: "SG"
             }
         }
-        // console.log(request);
 
         // request submission and response handler
         directionsService.route(request, function(result, status) {
-            // console.log(result);
-            // console.log(status);
             switch (status) {
-                // if a response is available
                 case google.maps.DirectionsStatus.OK:
                     displayResult(result, mode);
                     directionsDisplay.setDirections(result);
                     break;
-                // if no response is available
                 case google.maps.DirectionsStatus.NOT_FOUND:
                     displayError("The location you entered cannot be found!");
                     break;
@@ -340,7 +196,6 @@ function getRoute(event) {
         });
     }
 
-    // general exception handler
     catch (e) {
         displayError("Error! Please re-submit the search");
     }
@@ -349,30 +204,20 @@ function getRoute(event) {
 // function for displaying result on the website
 function displayResult(result, mode) {
     
-    // GMaps response handler
     var route = result.routes[0];
-    // console.log(route);
     var warnings = route.warnings;
     var total_distance = 0;
     var total_duration = 0;
-    // console.log("Length: " + route.legs.length);
 
-    // navigation response compiler
     var details = "<li style='list-style: none'><i class='fa fa-dot-circle-o'></i> ";
     for (var l = 0; l < route.legs.length; l++) {
         var leg = route.legs[l];
-        // console.log(leg);
-
-        // general info computation
         total_distance += leg.distance.value;
         total_duration += leg.duration.value;
         details += legBuilder(leg);
 
     };
     details += "</li><li style='list-style: none'><i class='fa fa-circle-o'></i> Suntec Convention & Exhibition Center, Nicoll Hwy, Singapore</li>";
-    // console.log(details);
-    // console.log(total_duration + "s");
-    // console.log(total_distance + "m");
     switch (mode) {
         case "DRIVING":
             mode = "Drive";
@@ -387,20 +232,19 @@ function displayResult(result, mode) {
             mode = "Walk";
             break;
     }
-    // show route cost in terms of time and distance
     if (total_duration < 3600) {
         $("#route-cost").text(mode + " " + (total_distance/1000).toFixed(1) + " km, " + (total_duration/60).toFixed(1) + " min");
     } else {
         $("#route-cost").text(mode + " " + (total_distance/1000).toFixed(1) + " km, " + (total_duration/3600).toFixed(0) + " h " + (total_duration/60).toFixed(0) % 60 + " min");
     }
-    // show warnings from GMaps
     if (route.warnings.length != 0) {
         $("#route-warning").text(route.warnings[0]);
     } else {
-        $("#route-warning").empty(); // or empty placeholder if there's none
+        $("#route-warning").empty();
     }
-    // show route details (navigation)
     $("#route-details").html(details);
+    var height = $(".col-md-5").height();
+    $("#get-directions").height(height);
     autocompleteVia.set("place", null);
 
 };
@@ -422,19 +266,12 @@ function legBuilder(leg) {
         result += instruction;
     }
     result += "</ul>";
-    // console.log(result);
     return result;
 }
 
 // function for displaying error message in warning placeholder
 function displayError(errorMessage) {
-    // console.log(errorMessage)
     $("#route-cost").empty();
     $("#route-details").empty();
     $("#route-warning").text(errorMessage);
 };
-
-// This example displays an address form, using the autocomplete feature 
-// of the Google Places API to help users fill in the information. 
-// This example requires the Places library. Include the libraries=places 
-// parameter windowHeighten you first load the API. For example: // 
