@@ -300,7 +300,6 @@ div .read-more {
 .panel-body > h4 {
 	text-align: center;
 	font: 20px pp-sans-big-bold;
-	font-style: italic;
 }
 
 .panel-body > h5 {
@@ -377,10 +376,6 @@ div .read-more {
 	padding: 0;
 }
 
-#about-heading .panel-body > p:nth-child(6),
-#about-heading .panel-body > p:nth-child(10) {
-	padding-left: 25px;
-}
 
 #about-heading .panel-body > ul {
 	padding-left: 45px;
@@ -388,6 +383,10 @@ div .read-more {
 
 #about-heading .panel-body {
 	text-align: justify;
+}
+
+#register-wrapper {
+	text-align: center;
 }
 
 /* Mobile-first */
