@@ -1,6 +1,8 @@
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
 
+    var firstSearch = true;
+
     // Enable smooth navigation with navbar
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -15,6 +17,13 @@ $(function() {
         $("html, body").stop().animate({
             scrollTop: $("#venue-heading").offset().top - 50
         }, 2000, 'easeInOutExpo');
+        if ($(window).width() < 992 && firstSearch) {
+            firstSearch = false;
+            setTimeout(function() {
+                alert("Guidance is available at the bottom of the page!");
+            }, 2000);
+        }
+
     })
 
     // Auto-toggle navbar-collapse on mobile device
@@ -56,6 +65,8 @@ $(function() {
             queue: false,
         });
     };
+
+    $("[data-toggle='tooltip']").tooltip();
 
 });
 
@@ -243,8 +254,10 @@ function displayResult(result, mode) {
         $("#route-warning").empty();
     }
     $("#route-details").html(details);
-    var height = $(".col-md-5").height();
-    $("#get-directions").height(height);
+    if ($(window).width() >= 992) {
+        var height = $(".col-md-5").height();
+        $("#get-directions").height(height);
+    }
     autocompleteVia.set("place", null);
 
 };
