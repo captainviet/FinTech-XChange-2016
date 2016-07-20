@@ -28,12 +28,6 @@
 
 
 /* HTML element */
-body {
-	/* TODO: ... */
-	background: url("../img/background.png") no-repeat center 30vh;
-	background-size: 50vh;
-	padding-top: 20vh;
-}
 
 tbody {
 	font: 13px pp-sans-big-medium;
@@ -47,21 +41,6 @@ table {
 body > p {
 	text-align: center;
 	font: 29px pp-sans-big-regular;
-}
-
-body > div:nth-child(2) {
-	font: 30px pp-sans-big-light;
-	color: #363b3e;
-	text-align: center;
-	position: relative;
-	top: -10vh;
-	margin: auto;
-	width: 90%;
-	height: 90vh;
-	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-	background: -o-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-	background: -moz-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
 }
 
 tr > td {
@@ -337,11 +316,6 @@ div .read-more {
 	color: #030303;
 }
 
-#about-heading {
-	position: relative;
-	top: 10%;
-}
-
 #pm {
 	text-align: center;
 }
@@ -389,6 +363,32 @@ div .read-more {
 	text-align: center;
 }
 
+#background-wrapper {
+	background: url("../img/background.png") no-repeat center 20vh;
+	min-height: 100vh;
+	background-size: 40vh;
+	z-index: -1;
+	position: absolute;
+	top: 20vh;
+}
+
+#page-title {
+	font: 30px pp-sans-big-light;
+	color: #363b3e;
+	text-align: center;
+	position: relative;
+	top: 10vh;
+	bottom: 10vh;
+	margin: auto;
+	width: 90%;
+	height: 100vh;
+	z-index: 2;
+	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+	background: -o-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+	background: -moz-linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+}
+
 /* Mobile-first */
 
 @media(min-width:767px) {
@@ -400,124 +400,7 @@ div .read-more {
 
 }
 
-/* IE8-10 target */
-@media screen\0 {
-	tbody {
-		font-size: 16px;
-	}
-
-	body > p {
-		font-size: 32px;
-	}
-
-	body {
-		padding-top: 30vh;
-		background-position: 70vw 10vh;
-		background-size: 20%;
-	}
-
-	body > div:nth-child(2) {
-		top: -15vh;
-		left: 5vw;
-		text-align: left;
-		background: transparent;
-		height: auto;
-	}
-
-	.about-heading .panel-body {
-		padding-left: 10%;
-		padding-right: 10%;
-	}
-
-	.modal-dialog {
-		margin-left: 30%;
-		width: 40%;
-	}
-
-	.container {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.read-more {
-		display: none;
-	}
-
-	.read-more-text {
-		display: block;
-	}
-
-	.name {
-		font-size: 15px;
-	}
-
-	.text-muted {
-		font-size: 13px;
-	}
-
-	.horizontal > div > div > div > p {
-		padding: 2%;
-	}
-
-	.panel-heading > h3 {
-		font-size: 40px;
-	}
-
-	.panel-title-cust {
-		font-size: 21px;
-	}
-
-	.venue-info {
-		font-size: 16px;
-	}
-
-	.panel-body {
-		font-size: 15px;
-	}
-
-	.wrapper > p {
-		font-size: 20px;
-	}
-
-	.speaker-info {
-		font-size: 10px;
-	}
-
-	.thumbnail > p {
-		font-size: 18px;
-	}
-
-	.thumbnail > p > span {
-		font-size: 15px;
-	}
-
-	.modal-body img {
-		max-width: 50%;
-	}
-
-	#event-name {
-		font-size: 50px;
-	}
-
-	#event-loc {
-		font-size: 40px;
-	}
-
-	#event-time {
-		font-size: 37px;
-	}
-
-}
-
 @media only screen and (min-width: 350px) {
-
-	body {
-		padding-top: 10vh;
-	}
-
-	body > div:nth-child(2) {
-		top: 0;
-	}
 
 	#event-name {
 		font-size: 33px;
@@ -684,19 +567,6 @@ div .read-more {
 }
 
 @media only screen and (min-width: 1024px) {
-	body {
-		padding-top: 20vh;
-		background-position: 70vw 10vh;
-		background-size: 20%;
-	}
-
-	body > div:nth-child(2) {
-		top: -10vh;
-		left: 5vw;
-		text-align: left;
-		background: transparent;
-		height: auto;
-	}
 
 	.about-heading .panel-body {
 		padding-left: 10%;
@@ -707,39 +577,54 @@ div .read-more {
 		margin-left: 25%;
 		width: 50%;
 	}
+
+	#page-title {
+		text-align: left;
+		margin: 0;
+		width: 100%;
+		background: transparent;
+		height: 50vh;
+	}
+
+	#background-wrapper {
+		top: 10vh;
+		background-position: right 10vw top;
+		background-size: 25vh;
+	}
+
 }
 
 @media only screen and (min-width: 1150px) {
-	body {
-		padding-top: 30vh;
-	}
-
-	body > div:nth-child(2) {
-		top: -15vh;
-	}
 
 	.modal-dialog {
 		margin-left: 30%;
 		width: 40%;
 	}
 
+	.register {
+		font-size: 1.5vw;
+		border-radius: 0.4vw;
+	}
+
 	#event-name {
-		font-size: 50px;
+		font-size: 4.5vw;
 	}
 
 	#event-loc {
-		font-size: 40px;
+		font-size: 3.5vw;
 	}
 
 	#event-time {
-		font-size: 37px;
+		font-size: 3vw;
 	}
 
-
-}
-
-@media only screen and (min-width: 1280px) {
-	body {
-		background-position: 68vw 10vh;
+	#page-title {
+		height: 30vw;
 	}
+
+	#background-wrapper {
+		background-position: right 10vw 5vh;
+		background-size: auto 20vw;
+	}
+
 }
