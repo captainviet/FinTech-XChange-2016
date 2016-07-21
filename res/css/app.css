@@ -164,6 +164,7 @@ div .read-more {
 .headshot {
 	text-align: center;
 	padding: 0;
+	min-height: 50vh;
 }
 
 .headshot > img {
