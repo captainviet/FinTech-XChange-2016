@@ -48,14 +48,14 @@ tr > td {
 }
 
 hr.blue-top {
-	height: 2.5px;
+	height: 3px;
   	width: 100%;
   	margin: 0;
   	background: #40c4ff;
   	border: none;
 }
 
-footer > div > p > span {
+.paypal-link {
 	margin: 0;
 	margin-top: 5px;
 }
@@ -90,17 +90,8 @@ div .read-more {
 	padding: 5%;
 }
 
-.name {
-	font: bolder 12px;
-	padding: 5px;
-}
-
 .text-muted {
 	font-size: 11px;
-}
-
-.horizontal > div > div > div > p {
-	padding: 2%;
 }
 
 .panel-heading > h3 {
@@ -116,7 +107,7 @@ div .read-more {
 }
 
 .underline {
-	height: 2.5px;
+	height: 3px;
 	width: 10%;
 	margin: 0;
 	background: #40c4ff;
@@ -135,11 +126,6 @@ div .read-more {
 .box > .row {
 	padding: 5%;
 	border-bottom: thin solid #ececec;
-}
-
-.box > .row > .col-md-2 {
-	text-align: center;
-	color: #8c8c8c;
 }
 
 .venue-info {
@@ -184,12 +170,12 @@ div .read-more {
 	max-width: 80%;
 }
 
-.headshot > p {
+.name {
 	font: 15px pp-sans-big-bold;
 }
 
 
-.headshot > p > span {
+.name > span {
 	font: 13px pp-sans-big-light;
 }
 
@@ -211,12 +197,6 @@ div .read-more {
 
 .read-more-text {
 	display: none;
-}
-
-.col-md-4 > a > img {
-	margin: 0;
-	height: 300px;
-	size: 100%;
 }
 
 .container-fluid > .row {
@@ -292,7 +272,7 @@ div .read-more {
 	width: 100%;
 }
 
-#navbar-ppil > ul > li > a {
+a[class="page-scroll"] {
 	font: pp-sans-big-bold;
 	text-transform: uppercase;
 	color: #444444;
@@ -310,7 +290,7 @@ div .read-more {
 #mode > li > i {
 	display: inline-block;
 	width: 10%;
-	padding: 7.5px 0;
+	padding: 7px 0;
 	margin: 0;
 	text-decoration: none;
 	color: #030303;
@@ -351,7 +331,7 @@ div .read-more {
 }
 
 
-#about-heading .panel-body > ul {
+.about-inner-list {
 	padding-left: 45px;
 }
 
@@ -461,10 +441,6 @@ div .read-more {
 
 	.text-muted {
 		font-size: 13px;
-	}
-
-	.horizontal > div > div > div > p {
-		padding: 2%;
 	}
 
 	.panel-heading > h3 {

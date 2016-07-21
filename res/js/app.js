@@ -20,7 +20,7 @@ $(function() {
         if ($(window).width() < 992 && firstSearch) {
             firstSearch = false;
             setTimeout(function() {
-                alert("Guidance is available at the bottom of the page!");
+                alert("Direction is available at the bottom of the page!");
             }, 2000);
         }
 
@@ -49,22 +49,6 @@ $(function() {
         $("#" + id).hide();
         $(".read-more-text").show();
     }
-
-    // Show more for image
-    function imgReadMore(id) {
-        $("#" + id).animate({
-            opacity: 0.2,
-        }, {
-            duration: 500,
-            queue: false,
-        });
-        $("#" + id + "-info").animate({
-            opacity: 1,
-        }, {
-            duration: 500,
-            queue: false,
-        });
-    };
 
     $("[data-toggle='tooltip']").tooltip();
 
