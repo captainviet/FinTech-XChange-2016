@@ -266,6 +266,14 @@ div .read-more {
 	font: 17px pp-sans-big-medium;
 }
 
+.more-to-come {
+	font: 25px pp-sans-big-light;
+	font-style: italic;
+	color: #999;
+	float: right;
+	padding: 10px;
+}
+
 /* id */
 
 #map {
