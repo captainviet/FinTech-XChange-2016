@@ -163,8 +163,8 @@ div .read-more {
 
 .headshot {
 	text-align: center;
-	padding: 0;
-	min-height: 50vh;
+	padding: 10px;
+	min-height: 40vh;
 }
 
 .headshot > img {
@@ -264,6 +264,14 @@ div .read-more {
 
 .panel-body > h5 {
 	font: 17px pp-sans-big-medium;
+}
+
+.more-to-come {
+	font: 25px pp-sans-big-light;
+	font-style: italic;
+	color: #999;
+	float: right;
+	padding: 10px;
 }
 
 /* id */
