@@ -164,7 +164,7 @@ div .read-more {
 .headshot {
 	text-align: center;
 	padding: 10px;
-	min-height: 35vh;
+	min-height: 43vh;
 }
 
 .headshot > img {
@@ -175,9 +175,12 @@ div .read-more {
 	font: 15px pp-sans-big-bold;
 }
 
-
-.name > span {
+.designation {
 	font: 13px pp-sans-big-light;
+}
+
+.organization {
+	font: 12px pp-sans-big-light;
 }
 
 .tab-pane {
@@ -272,6 +275,10 @@ div .read-more {
 	color: #999;
 	float: right;
 	padding: 10px;
+}
+
+.panel .row:last-of-type {
+	padding-top: 0;
 }
 
 /* id */
@@ -486,6 +493,10 @@ a[class="page-scroll"] {
 
 	.modal-body img {
 		max-width: 50%;
+	}
+
+	.headshot {
+		min-height: 35vh;
 	}
 
 	#map {
