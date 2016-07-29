@@ -402,10 +402,6 @@ a[class="page-scroll"] {
 		max-width: 60%;
 	}
 
-	.headshot {
-		min-height: 43vh;
-	}
-
 	#event-name {
 		font-size: 33px;
 	}
@@ -499,10 +495,6 @@ a[class="page-scroll"] {
 		max-width: 50%;
 	}
 
-	.headshot {
-		min-height: 37vh;
-	}
-
 	#map {
 		height: 450px;
 		width: 100%;
@@ -538,6 +530,10 @@ a[class="page-scroll"] {
 	.striked-header:before {
 		left: 10%;
 		width: 80%;
+	}
+
+	.headshot {
+		min-height: 47vh;
 	}
 
 	#map {
