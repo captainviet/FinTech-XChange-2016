@@ -164,7 +164,7 @@ div .read-more {
 .headshot {
 	text-align: center;
 	padding: 10px;
-	min-height: 43vh;
+	min-height: 45vh;
 }
 
 .headshot > img {
@@ -400,6 +400,10 @@ a[class="page-scroll"] {
 
 	.modal-body img {
 		max-width: 60%;
+	}
+
+	.headshot {
+		min-height: 43vh;
 	}
 
 	#event-name {
